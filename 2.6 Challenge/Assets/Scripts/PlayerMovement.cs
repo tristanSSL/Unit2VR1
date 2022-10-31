@@ -6,14 +6,19 @@ public class PlayerMovement : MonoBehaviour
 {
     Vector2 xMove;
     Transform player;
+    float xMovement;
+    float yMovement;
+    public int speed = 4;
     void Start()
     {
-        xMove = new Vector2(1f,0f);
         player = gameObject.transform;
     }
 
     void Update()
     {
+        xMovement = Input.GetAxis("Horizontal")*speed;
+        yMovement = Input.GetAxis("Vertical")*speed;
+        xMove = new Vector2(xMovement, yMovement);
         player.Translate(xMove*Time.deltaTime);
     }
 }
