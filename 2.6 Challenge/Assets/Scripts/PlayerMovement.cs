@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     Transform player;
     float xMovement;
     float yMovement;
-    public int speed = 4;
+    public int xSpeed = 4;
+    public int ySpeed = 6;
     void Start()
     {
         player = gameObject.transform;
@@ -16,9 +17,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        xMovement = Input.GetAxis("Horizontal")*speed;
-        yMovement = Input.GetAxis("Vertical")*speed;
+        xMovement = Input.GetAxisRaw("Horizontal")*xSpeed;
+        yMovement = Input.GetAxisRaw("Vertical")*ySpeed;
         xMove = new Vector2(xMovement, yMovement);
         player.Translate(xMove*Time.deltaTime);
+        if (xMovement > 0)
+        {
+            player.localScale = new Vector3(7.0f, 7.0f, 0.0f);
+        }
+        if (xMovement < 0)
+        {
+            player.localScale = new Vector3(-7.0f, 7.0f, 0.0f);
+        }
     }
 }
