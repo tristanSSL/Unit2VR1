@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    //defining needed variables
     Vector2 xMove;
     Transform player;
     float xMovement;
@@ -13,6 +14,7 @@ public class Player_Movement : MonoBehaviour
     public float jumpForce = 300;
     void Start()
     {
+        //getting items invariables to use later
         player = gameObject.transform;
         rb = GetComponent<Rigidbody2D>();
     }
