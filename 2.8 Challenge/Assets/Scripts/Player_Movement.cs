@@ -85,6 +85,10 @@ public class Player_Movement : MonoBehaviour
         if (collision.gameObject.tag == "Acorn")
         {
             acornNum += 1;
+            if (acornNum == 13)
+            {
+                Debug.Log("You Win!");
+            }
         }
         if (collision.gameObject.tag == "Enemy" && healthLeft > 0)
         {

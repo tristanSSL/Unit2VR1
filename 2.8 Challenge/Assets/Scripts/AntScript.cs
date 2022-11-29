@@ -8,20 +8,18 @@ public class AntScript : MonoBehaviour
     Transform enemy;
     Vector2 move;
     float speed = 2;
-    // Start is called before the first frame update
     void Start()
     {
         move = new Vector2(-1,0);
         enemy = gameObject.transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (enemy.position.x >= -2.69f )
+        if (enemy.position.x >= -0.75f)
         {
             walkLeft = true;
-        }else if (enemy.position.x <= -6)
+        }else if (enemy.position.x <= -3.538f)
         {
             walkLeft = false;
         }
