@@ -11,11 +11,11 @@ public class Player_Movement : MonoBehaviour
     public int xSpeed = 4;
     public Animator anim;
     Rigidbody2D rb;
-    public float jumpForce = 300;
     public float doubleJumpForce = 250;
     int jumpsLeft;
     public int acornNum;
     public int healthLeft;
+    public float jumpForce = 350;
     void Start()
     {
         //getting components to use later
@@ -29,7 +29,7 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-        //determining weather move keys are pressed
+        //determining whether move keys are pressed
         xMovement = Input.GetAxisRaw("Horizontal") * xSpeed;
         //Walking animation
         if (xMovement != 0)
@@ -97,3 +97,4 @@ public class Player_Movement : MonoBehaviour
         healthLeft = 0;
     }
 }
+
