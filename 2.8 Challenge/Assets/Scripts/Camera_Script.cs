@@ -10,18 +10,18 @@ public class Camera_Script : MonoBehaviour
     {
         Camera = gameObject.transform;
         Camera.position = new Vector3(0,0,-10);
-        camUp = new Vector2(0,.8f);
+        camUp = new Vector2(0,1f);
     }
 
     void Update()
     {
-        if (Camera.position.y < 21)
+        if (Camera.position.y < 23)
         {
             Camera.Translate(camUp * Time.deltaTime);
         }
         else
         {
-            Camera.position = new Vector3(0,21,-10);
+            Camera.position = new Vector3(0,23,-10);
         }
     }
 }
