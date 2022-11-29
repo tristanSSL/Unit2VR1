@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -93,6 +94,10 @@ public class Player_Movement : MonoBehaviour
         if (collision.gameObject.tag == "Enemy" && healthLeft > 0)
         {
             healthLeft -= 1; 
+        }
+        if (collision.gameObject.tag == "Door")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
