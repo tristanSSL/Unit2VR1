@@ -71,8 +71,7 @@ public class Player_Movement : MonoBehaviour
         }
         if (healthLeft == 0)
         {
-            Destroy(gameObject);
-            Debug.Log("Game Over!");
+            SceneManager.LoadScene("Game Over");
         }
     }
 

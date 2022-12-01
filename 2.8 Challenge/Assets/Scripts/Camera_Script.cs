@@ -11,6 +11,7 @@ public class Camera_Script : MonoBehaviour
         Camera = gameObject.transform;
         Camera.position = new Vector3(0,0,-10);
         camUp = new Vector2(0,1f);
+
     }
 
     void Update()
@@ -21,7 +22,7 @@ public class Camera_Script : MonoBehaviour
         }
         else
         {
-            Camera.position = new Vector3(0,23,-10);
+            Camera.position = new Vector3(0, 23, -10);
         }
     }
 }
