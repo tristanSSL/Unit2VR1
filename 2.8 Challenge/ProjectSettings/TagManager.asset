@@ -9,6 +9,7 @@ TagManager:
   - Door
   - Enemy
   - Potion
+  - Poison
   layers:
   - Default
   - TransparentFX

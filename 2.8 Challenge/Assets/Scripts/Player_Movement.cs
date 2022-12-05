@@ -102,6 +102,13 @@ public class Player_Movement : MonoBehaviour
         {
             healthLeft += 1;
         }
+        if (collision.gameObject.tag == "Poison" && healthLeft >= 2)
+        {
+            healthLeft -= 2;
+        }else if (collision.gameObject.tag == "Poison" && healthLeft == 1)
+        {
+            healthLeft = 0;
+        }
     }
 
     public void OnBecameInvisible()
