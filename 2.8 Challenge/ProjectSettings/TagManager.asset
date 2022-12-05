@@ -8,6 +8,7 @@ TagManager:
   - Acorn
   - Door
   - Enemy
+  - Potion
   layers:
   - Default
   - TransparentFX

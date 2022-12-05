@@ -98,6 +98,10 @@ public class Player_Movement : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        if (collision.gameObject.tag == "Potion" && healthLeft < 5)
+        {
+            healthLeft += 1;
+        }
     }
 
     public void OnBecameInvisible()
