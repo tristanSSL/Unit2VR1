@@ -8,8 +8,6 @@ public class Cam_Script : MonoBehaviour
     public Player_Movement playerScript;
     GameObject player;
     Vector3 pos;
-    float playerPosX;
-    float playerPosY;
     void Start()
     {
         Camera = gameObject.transform;
