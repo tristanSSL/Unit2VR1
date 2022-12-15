@@ -12,6 +12,7 @@ public class Player_Movement : MonoBehaviour
     float yMove;
     public int speed = 4;
     string pressedFirst;
+    public string facingDirection;
     void Start()
     {
         player = gameObject.transform;
@@ -19,6 +20,7 @@ public class Player_Movement : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         pressedFirst = "Void";
+        facingDirection = "North";
     }
 
     void Update()
@@ -71,14 +73,24 @@ public class Player_Movement : MonoBehaviour
         if (yMove < 0 && pressedFirst == "y")
         {
             anim.SetInteger("Direction", 3);
+            facingDirection = "South";
         }
         if (yMove > 0 && pressedFirst == "y")
         {
             anim.SetInteger("Direction", 1);
+            facingDirection = "North";
         }
         if ((xMove < 0 || xMove > 0) && pressedFirst == "x")
         {
             anim.SetInteger("Direction", 2);
+        }
+        if (xMove < 0 && pressedFirst == "x")
+        {
+            facingDirection = "West";
+        }
+        if (xMove > 0 && pressedFirst == "x")
+        {
+            facingDirection = "East";
         }
     }
 }

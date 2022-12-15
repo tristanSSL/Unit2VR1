@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 0eabd611dcafb25428b56d5049c64c72
+  - enabled: 1
+    path: Assets/Scenes/Overworld.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: f28c6b00e37078f4c964623c6cb443ed
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 0683aafeb1902ea4abef7d3f7c498ec6
   m_configObjects: {}
